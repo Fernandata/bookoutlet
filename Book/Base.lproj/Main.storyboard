@@ -78,6 +78,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="0TG-qd-DSE"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="Xoz-vy-agz" id="y1i-rp-ns6"/>
+                        <outlet property="passwordTextField" destination="uXc-oC-6gf" id="OKV-fA-HJe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nZL-eu-qba" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
