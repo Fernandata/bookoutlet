@@ -24,7 +24,16 @@ class LoginViewController: UIViewController {
         
         Auth.auth().signIn(withEmail: email, password: password) { firebaseResult, error in
             if let e = error{
-                print("error")
+                print(e,"error")
+                //self.performSegue(withIdentifier: "goToNext", sender: self)
+                let alert = UIAlertController(
+                    title: "Dear User", message: "Please verify your email account or password", preferredStyle: .alert
+                )
+                let action = UIAlertAction(
+                    title: "Thank you!", style: .default, handler: nil
+                )
+                alert.addAction(action)
+                self.present(alert, animated: true, completion: nil)
             } else {
                 //go to home screen
                 self.performSegue(withIdentifier: "goToNext", sender: self)

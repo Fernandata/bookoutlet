@@ -26,6 +26,14 @@ class CreateAccountViewController: UIViewController {
         Auth.auth().createUser(withEmail: email, password: password) { firebaseResult, error in
             if let e = error{
                 print("error")
+                let alert = UIAlertController(
+                    title: "Dear User", message: "Enter a valid email account or password", preferredStyle: .alert
+                )
+                let action = UIAlertAction(
+                    title: "Thank you!", style: .default, handler: nil
+                )
+                alert.addAction(action)
+                self.present(alert, animated: true, completion: nil)
             } else {
                 //go to home screen
                 self.performSegue(withIdentifier: "goToNext", sender: self)
