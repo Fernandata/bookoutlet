@@ -15,6 +15,8 @@
 		68E4EC5D2939CEDC005BC224 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68E4EC5B2939CEDC005BC224 /* LaunchScreen.storyboard */; };
 		68EB5D37294A2C7D0008FD20 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EB5D36294A2C7D0008FD20 /* LoginViewController.swift */; };
 		68EB5D3A294A2E850008FD20 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EB5D39294A2E850008FD20 /* CreateAccountViewController.swift */; };
+		68EB5D3C294A32300008FD20 /* GoogleService-Info (2).plist in Resources */ = {isa = PBXBuildFile; fileRef = 68EB5D3B294A32300008FD20 /* GoogleService-Info (2).plist */; };
+		68EB5D3F294A32F20008FD20 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 68EB5D3E294A32F20008FD20 /* FirebaseAuth */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,7 @@
 		68E4EC5E2939CEDC005BC224 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68EB5D36294A2C7D0008FD20 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		68EB5D39294A2E850008FD20 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		68EB5D3B294A32300008FD20 /* GoogleService-Info (2).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (2).plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68EB5D3F294A32F20008FD20 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +72,7 @@
 				68E4EC592939CEDC005BC224 /* Assets.xcassets */,
 				68E4EC5B2939CEDC005BC224 /* LaunchScreen.storyboard */,
 				68E4EC5E2939CEDC005BC224 /* Info.plist */,
+				68EB5D3B294A32300008FD20 /* GoogleService-Info (2).plist */,
 			);
 			path = Book;
 			sourceTree = "<group>";
@@ -121,6 +126,9 @@
 			dependencies = (
 			);
 			name = Book;
+			packageProductDependencies = (
+				68EB5D3E294A32F20008FD20 /* FirebaseAuth */,
+			);
 			productName = Book;
 			productReference = 68E4EC4D2939CEDB005BC224 /* Book.app */;
 			productType = "com.apple.product-type.application";
@@ -149,6 +157,9 @@
 				Base,
 			);
 			mainGroup = 68E4EC442939CEDB005BC224;
+			packageReferences = (
+				68EB5D3D294A32F20008FD20 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 68E4EC4E2939CEDB005BC224 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -163,6 +174,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68EB5D3C294A32300008FD20 /* GoogleService-Info (2).plist in Resources */,
 				68E4EC5D2939CEDC005BC224 /* LaunchScreen.storyboard in Resources */,
 				68E4EC5A2939CEDC005BC224 /* Assets.xcassets in Resources */,
 				68E4EC582939CEDB005BC224 /* Main.storyboard in Resources */,
@@ -398,6 +410,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		68EB5D3D294A32F20008FD20 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		68EB5D3E294A32F20008FD20 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 68EB5D3D294A32F20008FD20 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 68E4EC452939CEDB005BC224 /* Project object */;
 }

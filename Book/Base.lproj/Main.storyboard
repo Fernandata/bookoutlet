@@ -81,11 +81,28 @@
                     <connections>
                         <outlet property="emailTextField" destination="pcE-Ec-Kjn" id="yjQ-Gb-Mpl"/>
                         <outlet property="passwordTextField" destination="p1q-cj-vhG" id="LCC-9q-1iu"/>
+                        <segue destination="pCq-Yv-fB2" kind="show" identifier="goToNext" id="kho-hu-UIJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zev-JE-2qF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1994.6564885496182" y="-419.0140845070423"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="71a-Ki-qGx">
+            <objects>
+                <viewController id="pCq-Yv-fB2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7cC-2n-xpR">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="elD-5t-Qlh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mvF-wI-L8G"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GBm-K0-vYR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3189" y="-103"/>
         </scene>
         <!--Create Account View Controller-->
         <scene sceneID="YM7-Wi-WaI">
@@ -124,6 +141,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="Phu-Ou-J2u" id="Wfe-v6-B2V"/>
                         <outlet property="passwordTextField" destination="M1F-8L-PMT" id="RBF-MN-M5u"/>
+                        <segue destination="pCq-Yv-fB2" kind="show" identifier="goToNext" id="AEG-vo-yaa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0fh-i2-L0F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -149,6 +167,9 @@
             <point key="canvasLocation" x="11.450381679389313" y="-34.507042253521128"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="kho-hu-UIJ"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
